@@ -29,7 +29,7 @@ load_dotenv()
 
 def pushover(title, message):
     """
-    Receives title, message, and severity variables and generates a pushover alert.
+    Receives title & message variables and generates a pushover alert.
     Disabled in default env.env file. Set ALERTS=true in .env file to enable. 
     """
     alerts = os.getenv('ALERTS')
