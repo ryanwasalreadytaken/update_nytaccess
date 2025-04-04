@@ -6,23 +6,23 @@ The Multnomah County Library provides complimentary access to the New York Times
 
 The script does not have an install, per se. You can simply clone this repo to the location of your choice and run from there. At a minimum, you'll need to do the following before executing the code:
 
-1. Populate env.env with your library card number and pin
-2. Rename env.env to .env
+1. Populate `env.env` with your library card number and pin
+2. Rename `env.env` to `.env`
 3. install the requirements listed in requirements.txt 
 
 If any of these items have not been completed prior to running the script will fail. 
 
 > [!CAUTION]
-> The .env file contains your library card info and potentially your pushover userkey and apikey. Once this file is configured you may want to restrict access so your sensitive info is not potentially exposed to other users on your machine, etc. On linux/mac you can use chmod to set the file perms to 400. 
+> The `.env` file contains your library card info and potentially your pushover userkey and apikey. Once this file is configured you may want to restrict access so your sensitive info is not potentially exposed to other users on your machine, etc. On linux/mac you can use chmod to set the file perms to 400. 
 
 ## Configuration
 
-There are a number of items that can be configured in the .env file. There are only two that are strictly required for this script to work:
+There are a number of items that can be configured in the `.env` file. There are only two that are strictly required for this script to work:
 
 - `CARDNUM` - Your Multnomah County Library library card number
 - `CARDPIN` - Your Multnomah County Library pin number
  
-These are the same card and pin numbers you use to login to the library website. This script will not work if either of these items are not populated in .env or are invalid.
+These are the same card and pin numbers you use to login to the library website. This script will not work if either of these items are not populated in `.env` or are invalid.
 
 ### Optional Configuration ###
 
@@ -65,7 +65,7 @@ While there are a million ways to kick off a script, nearly all of my scripts ru
 > You will need to modify the path in the cron entry above to match the directory you're actually running from. In my case "cd /path/to/script/nyt-library-update" is changed to "/opt/scripts/nyt-library-update/"
 
 ## Logging ##
-Logging can be enable or disabled entirely by setting `ALERTS=` to true or false in .env. 
+Logging can be enable or disabled entirely by setting `ALERTS=` to true or false in `.env`. 
 
 When running manually the script will log to the console as well as a log file located at logs/update.log. When scheduled with cron or otherwise automated the script will still log to logs/update.log. Logs will be rotated after they reach approximately 10MB in size. A total of 3 logs files will be rolled over. 
 
