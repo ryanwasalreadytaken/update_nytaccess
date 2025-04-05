@@ -8,7 +8,7 @@ The script does not have an install, per se. You can simply clone this repo to t
 
 1. Populate `env.env` with your library card number and pin
 2. Rename `env.env` to `.env`
-3. install the requirements listed in requirements.txt 
+3. Install the requirements listed in requirements.txt 
 
 If any of these items have not been completed prior to running the script will fail. 
 
