@@ -54,7 +54,7 @@ If all configuration options are correct and there were no errors you'll see som
 `2025-04-04 16:06 - INFO - NYT access renewal was successful!`
 
 ## Scheduling via cron ##
-While there are a million ways to kick off a script, nearly all of my scripts run from a linux machine -- so my preferred method is to create a python virtual environment for the script to run from and using cron for scheduling. Cron is simple, straightforward, has been around for a million years, and virtually never fails. To schedule the script to run every morning at 6AM complete the steps below, making sure to modify the directories to fit your environment.
+While there are a million ways to kick off a script, nearly all of my scripts run from a linux machine -- so my preferred method is to create a python virtual environment and using cron for scheduling. Cron is simple, straightforward, has been around for a million years, and virtually never fails. To schedule the script to run every morning at 6AM complete the steps below, making sure to modify the directories to fit your environment.
 
 1. Open cron editor under your user account: `crontab -e`
 2. Add the following line at the bottom of the file:
