@@ -37,7 +37,7 @@ The script is capable of Pushover alerting, however this is disabled by default.
 
 The script does not accept any arguments. To launch simply activate your venv and run `python update_nytaccess.py`.
 
-## Manually running ##
+### Manually running ###
 
 Below are a manual step-by-step instructions that may or may not work for you. The instructions below assume you're using linux, Mac, or some flavor of unixy OS. Sorry Windows users, you're on your own.
 
@@ -55,7 +55,7 @@ If all configuration options are correct and there were no errors you'll see som
 `2025-04-04 16:06 - INFO - Initializing NYT renewal script...`  
 `2025-04-04 16:06 - INFO - NYT access renewal was successful!`
 
-## Scheduling via cron ##
+### Scheduling via cron ###
 While there are a million ways to kick off a script, nearly all of my scripts run from a linux machine so my preferred method is to create a python virtual environment and using cron for scheduling. Cron is simple, straightforward, has been around for a million years, and virtually never fails. To schedule the script to run every morning at 6AM complete the steps below, making sure to modify the directories to fit your environment.
 
 1. Open cron editor under your user account: `crontab -e`
