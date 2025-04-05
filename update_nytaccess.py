@@ -87,12 +87,13 @@ def update_nyt():
         logging.info('NYT access renewal was successful!')
 
     except Exception as e:
+        # Close any hanging instances of firefox
+        driver.close()
+        driver.quit()
+
         hostname = os.uname().nodename
         title = "NYT Access Renewal Failure"
         message = f'An error occurred when reactivating on {hostname}:\n\n{e}'
-
-        driver.close()
-        driver.quit()
 
         logging.error(message, exc_info=True)
         pushover(title, message)
