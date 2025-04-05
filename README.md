@@ -26,7 +26,7 @@ These are the same card and pin numbers you use to login to the library website.
 
 ### Optional Configuration ###
 
-The script is capable of Pushover alerting, however this is disabled by default. To enable, populate the following items in .env with your information:
+The script is capable of Pushover alerting, however this is disabled by default. To enable populate the following items in .env with your information:
 
 - `ALERTS=true` - This enables alerting
 - `ALERT_PRIORITY=0` - This will determine the priority the alert is sent with. See [Pushover Message Priority](https://pushover.net/api#priority) for more info.
