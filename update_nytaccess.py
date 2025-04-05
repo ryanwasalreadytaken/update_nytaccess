@@ -74,21 +74,17 @@ def update_nyt():
         driver = webdriver.Firefox(options=options)
         driver.get(url)
 
-        logging.debug('Headless Firefox Initialized')
-
         username = driver.find_element(By.NAME, value='user')
         password = driver.find_element(By.NAME, value='pass')
 
         username.send_keys(cardnum)
         password.send_keys(cardpin, Keys.RETURN)
-        driver.close()
         driver.quit()
 
         logging.info('NYT access renewal was successful!')
 
     except Exception as e:
-        # Close any hanging instances of firefox
-        driver.close()
+        # Close any hung instances of firefox
         driver.quit()
 
         hostname = os.uname().nodename
