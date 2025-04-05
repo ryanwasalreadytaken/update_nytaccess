@@ -64,7 +64,7 @@ While there are a million ways to kick off a script, nearly all of my scripts ru
 3. Save file and exit
 
 > [!IMPORTANT]
-> You will need to modify the path in the cron entry above to match the directory you're actually running from. In my case "cd /path/to/script/nyt-library-update" is changed to "/opt/scripts/nyt-library-update/"
+> You will need to modify the path in the cron entry above to match the directory you're actually running from. In my case "cd /path/to/script/nyt-library-update" is changed to "/opt/scripts/nyt-library-update"
 
 ## Logging ##
 Logging can be enable or disabled entirely by setting `ALERTS=` to true or false in `.env`. 
