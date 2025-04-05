@@ -1,6 +1,6 @@
 # NYT Access Renewal Script
 
-The Multnomah County Library provides complimentary access to the New York Times for anyone with a library card. *Nice*, right? The down side is that you must re-activate the access frequently to maintain your subscription. This script will login and update your subscription automatically so you don't have to.
+The Multnomah County Library provides complimentary access to the New York Times for anyone with a library card. *Nice*, right? The down side is that you must reactivate the access frequently to maintain your subscription. This script will login and update your subscription automatically so you don't have to.
 
 ## Installation
 
