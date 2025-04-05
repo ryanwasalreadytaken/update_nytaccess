@@ -37,6 +37,8 @@ The script is capable of Pushover alerting, however this is disabled by default.
 
 The script does not accept any arguments. To launch simply activate your venv and run `python update_nytaccess.py`.
 
+## Manually running ##
+
 Below are a manual step-by-step instructions that may or may not work for you. The instructions below assume you're using linux, Mac, or some flavor of unixy OS. Sorry Windows users, you're on your own.
 
 1. Clone this repo to the location of your choosing.
