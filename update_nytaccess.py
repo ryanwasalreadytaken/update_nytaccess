@@ -29,8 +29,8 @@ load_dotenv()
 
 def pushover(title, message):
     """
-    Receives title & message variables and generates a pushover alert.
-    Disabled in default env.env file. Set ALERTS=true in .env file to enable. 
+    Receives title, message, and severity variables and generates a pushover alert.
+    Disabled in default env.env file. Set ALERTS=true in .env file to enable.
     """
     alerts = os.getenv('ALERTS')
     priority = os.getenv('ALERT_PRIORITY')
@@ -87,8 +87,9 @@ def update_nyt():
         logging.info('NYT access renewal was successful!')
 
     except Exception as e:
+        hostname = os.uname().nodename
         title = "NYT Access Renewal Failure"
-        message = f' An error occurred when reactivating on cloud.nerdtime.org:\n \n {e} '
+        message = f'An error occurred when reactivating on {hostname}:\n {e}'
 
         logging.error(message, exc_info=True)
         pushover(title, message)
