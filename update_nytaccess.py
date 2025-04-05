@@ -89,7 +89,10 @@ def update_nyt():
     except Exception as e:
         hostname = os.uname().nodename
         title = "NYT Access Renewal Failure"
-        message = f'An error occurred when reactivating on {hostname}:\n {e}'
+        message = f'An error occurred when reactivating on {hostname}:\n\n{e}'
+
+        driver.close()
+        driver.quit()
 
         logging.error(message, exc_info=True)
         pushover(title, message)
